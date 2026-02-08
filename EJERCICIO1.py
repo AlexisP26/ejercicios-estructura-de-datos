@@ -1,6 +1,6 @@
 #repaso de matrices
 class producto:
-    def __init__(self. nombre. precio. cantidad):
+    def __init__(self, nombre, precio, cantidad):
         self.nombre = nombre
         self.precio = precio 
         self.cantidad = cantidad
@@ -10,6 +10,9 @@ almacen= [[producto("aretes",5000, 50), producto("collares", 10000, 20)], [produ
 def buscar_producto(matriz, nombre_a_buscar):
     for fila in range(len(matriz)):
         for columna in range(len(matriz[fila])):
-            if matriz[fila][columna].nombre ==nombre_a_buscar:
-                return fila, columna
-    return "producto no encontrado"        
+            if matriz[fila][columna].nombre == nombre_a_buscar:
+                return fila, columna 
+    return "producto no encontrado"
+      
+resultado = buscar_producto(almacen, "collares")
+print(resultado)
